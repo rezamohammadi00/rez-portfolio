@@ -4,21 +4,21 @@ import Lottie from "lottie-react";
 // Icons
 import instagramIcon from "../assets/images/instagram.png";
 import dribbbleIcon from "../assets/images/dribbble.png";
-import facebookIcon from "../assets/images/facebook.png";
-import youtubeIcon from "../assets/images/youtube.png";
+// import facebookIcon from "../assets/images/facebook.png";
+// import youtubeIcon from "../assets/images/youtube.png";
 import linkedin from "../assets/lottie/Linkedin.json";
 
 const socialIcons = [
   { href: "#", src: instagramIcon, alt: "Instagram" },
   { href: "#", src: dribbbleIcon, alt: "Dribbble" },
-  { href: "#", src: facebookIcon, alt: "Facebook" },
-  { href: "#", src: youtubeIcon, alt: "YouTube" },
+  // { href: "#", src: facebookIcon, alt: "Facebook" },
+  // { href: "#", src: youtubeIcon, alt: "YouTube" },
 ];
 
 
 const Topbar = () => {
   return (
-    <div className="flex items-center justify-between">
+    <div className="flex justify-between items-center">
       <motion.p
         className="text-2xl font-bold"
         initial={{ opacity: 0, scale: 0.5 }}
@@ -28,8 +28,8 @@ const Topbar = () => {
         رض
       </motion.p>
 
-      <div className="flex items-center justify-between gap-2">
-      <Lottie animationData={linkedin} loop={true} className="w-12 -ml-3"/> 
+      <div className="flex gap-2 justify-between items-center">
+      <Lottie animationData={linkedin} loop={true} className="-ml-3 w-12"/> 
         {socialIcons.map(({alt,src,href}) => (
           <a href={href} key={alt}>
           <img src={src} alt={alt} className="w-6" />
