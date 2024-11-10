@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Alibaba";
+    src: url("./assets/font/Alibaba/Woff2/Alibaba-Light.woff2") format("woff2"),
+      url("./assets/font/Alibaba/Woff/Alibaba-Light.woff") format("woff"),
+      url("./assets/font/Alibaba/tff/Alibaba-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Alibaba";
+    src: url("./assets/font/Alibaba/Woff2/Alibaba-Regular.woff2")
+        format("woff2"),
+      url("./assets/font/Alibaba/Woff/Alibaba-Regular.woff") format("woff"),
+      url("./assets/font/Alibaba/tff/Alibaba-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Alibaba";
+    src: url("./assets/font/Alibaba/Woff2/Alibaba-Bold.woff2") format("woff2"),
+      url("./assets/font/Alibaba/Woff/Alibaba-Bold.woff") format("woff"),
+      url("./assets/font/Alibaba/tff/Alibaba-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+  }
+}

@@ -1,0 +1,82 @@
+npm install framer-motion
+import { motion } from "framer-motion"
+
+tip : whileInView & drag props
+
+----------------------------------------------------
+parallax scrolling :
+
+    .parallax {
+  /* The image used */
+  background-image: url("img_parallax.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+    }
+/* Some mobile devices have a problem with background-attachment: fixed */
+/* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+
+----------------------------------------------------
+by default in tailwind :
+    *{
+        margin:0px;
+        padding:0px;
+        box-sizing: border-box;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+----------------------------------------------------
+snap scroll effect:
+
+  html {          
+  scroll-snap-type: y mandatory;  
+  scroll-behavior: smooth;
+  }
+
+  .section {         
+  height: 100vh;
+  scroll-snap-align: center;
+}
+
+
+or 
+
+  .container {  
+  scroll-snap-type: y mandatory;  
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  height:100vh;
+  }
+
+  .item {      
+  height: 100vh;
+  scroll-snap-align: center;
+}
+
+----------------------------------------------------
+npm i lottie-react 
+
+import Lottie from "lottie-react";
+import groovyWalkAnimation from "./groovyWalk.json";
+
+const App = () => <Lottie animationData={groovyWalkAnimation} loop={true} style={{ width: 200, height: 200 }} />;
+
+export default App;
+
+tip:It allows developers to render  Lottie animations in real-time, using Lottie animation JSON files exported from Adobe After Effects through the Bodymovin plugin.
+----------------------------------------------------
