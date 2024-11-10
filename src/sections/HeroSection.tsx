@@ -33,7 +33,7 @@ const HeroSection = () => {
     >
       <Topbar />
       <div className="flex flex-col justify-center items-center h-full">
-        <div className="flex flex-col gap-4 items-start mt-6 w-96">
+        <div className="flex flex-col gap-4 items-start mt-8 w-96">
           <p className="mx-auto text-base text-indigo-800">
             (رضا‌محمدی)
           </p>
