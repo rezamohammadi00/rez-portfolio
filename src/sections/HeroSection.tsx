@@ -32,18 +32,18 @@ const HeroSection = () => {
       id="home"
     >
       <Topbar />
-      <div className="flex flex-col justify-center items-center h-full">
+      <div className="flex flex-col gap-8 justify-center items-center h-full">
         {/* title and subtitle and buttons */}
-        <div className="flex flex-col gap-4 items-start">
-          <p className="mx-auto text-base text-indigo-800">(رضا‌محمدی)</p>
-          <p className="flex flex-col items-center w-full text-lg font-bold text-center leading-loos">
+        <div className="flex flex-col gap-4 items-star">
+          {/* <p className="mx-auto text-base text-indigo-800">رضا‌محمدی</p> */}
+          <p className="flex flex-col items-center w-full text-lg font-bold leading-6 text-center">
             <span>
               توسعه دهنده موبایل و وب
               <span className="mr-2 text-indigo-800">اپلیکیشن</span>
             </span>
             و طراح رابط کاربری
           </p>
-          <div className="flex gap-3 justify-center items-center mt-10 w-full font-regular">
+          <div className="flex gap-3 justify-center items-center mt-4 w-full font-regular">
             <Button text="نمونه‌کارها" variant="filled" />
             <Button text="تماس‌با‌من" variant="outlined" />
           </div>
@@ -52,9 +52,9 @@ const HeroSection = () => {
         <img
           src={HERO}
           alt="hero"
-          className="object-contain mt-24 w-full h-auto max-h-96"
+          className="object-cover w-full h-auto max-h-96"
         />
-        <a href="#parallax1" className="absolute bottom-10">
+        <a href="#parallax1" className="absolute right-10 bottom-10">
           <img src={SCROLL} alt="scroll" className="mt-10 w-10" />
         </a>
       </div>
