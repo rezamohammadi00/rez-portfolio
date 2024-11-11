@@ -36,13 +36,34 @@ const HeroSection = () => {
         {/* title and subtitle and buttons */}
         <div className="flex flex-col gap-4 items-star">
           {/* <p className="mx-auto text-base text-indigo-800">رضا‌محمدی</p> */}
-          <p className="flex flex-col items-center w-full text-lg font-bold leading-6 text-center">
-            <span>
-              توسعه دهنده موبایل و وب
-              <span className="mr-2 text-indigo-800">اپلیکیشن</span>
-            </span>
-            و طراح رابط کاربری
-          </p>
+          <motion.p
+            className="flex flex-col items-center w-full text-lg font-bold leading-8 text-center"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <motion.span
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <span>توسعه دهنده موبایل و وبسایت </span> {/* Space added here */}
+              <motion.span
+                className="mr-2 text-indigo-800"
+                whileHover={{ scale: 1.1 }}
+              >
+                اپلیکیشن
+              </motion.span>
+            </motion.span>
+            <motion.span
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              و طراح رابط کاربری
+            </motion.span>
+          </motion.p>
+
           <div className="flex gap-3 justify-center items-center mt-4 w-full font-regular">
             <Button text="نمونه‌کارها" variant="filled" />
             <Button text="تماس‌با‌من" variant="outlined" />
@@ -54,9 +75,14 @@ const HeroSection = () => {
           alt="hero"
           className="object-cover w-full h-auto max-h-96"
         />
-        <a href="#parallax1" className="absolute right-10 bottom-10">
-          <img src={SCROLL} alt="scroll" className="mt-10 w-10" />
-        </a>
+        <motion.a
+          href="#parallax1"
+          className="absolute right-10 bottom-10"
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+        >
+          <img src={SCROLL} alt="scroll" className="w-10" />
+        </motion.a>
       </div>
     </section>
   );
