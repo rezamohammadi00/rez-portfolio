@@ -47,7 +47,7 @@ const HeroSection = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <span>توسعه دهنده موبایل و وبسایت </span> {/* Space added here */}
+              <span>توسعه دهنده موبایل و وب </span> {/* Space added here */}
               <motion.span
                 className="mr-2 text-indigo-800"
                 whileHover={{ scale: 1.1 }}
@@ -73,7 +73,7 @@ const HeroSection = () => {
         <img
           src={HERO}
           alt="hero"
-          className="object-cover w-full h-auto max-h-96"
+          className="object-contain w-full h-auto max-h-96"
         />
         <motion.a
           href="#parallax1"

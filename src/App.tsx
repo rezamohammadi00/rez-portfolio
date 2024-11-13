@@ -18,7 +18,9 @@ const App = () => {
         </div>
         <ServicesSection />
         <ParallaxSection />
-        <PortfolioSection />
+        <div id="portfolio">
+          <PortfolioSection />
+        </div>
         <PortfolioSection />
         <PortfolioSection />
         <ContactSection />
