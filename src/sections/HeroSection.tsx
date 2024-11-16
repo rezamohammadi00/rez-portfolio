@@ -77,7 +77,7 @@ const HeroSection = () => {
         />
         <motion.a
           href="#parallax1"
-          className="absolute right-10 bottom-10"
+          className="absolute right-10 bottom-20"
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
         >

@@ -10,7 +10,7 @@ const ParallaxSection = () => {
   return (
     <div className="relative h-screen snap-center" style={backgroundStyle}>
       <div className="flex justify-center items-center h-full">
-        <p className="p-2 -mt-12 text-5xl font-bold leading-normal text-center">تخصص من چیه؟</p>
+        <p className="px-6 -mt-12 text-5xl font-bold leading-normal text-center">تخصص من چیه؟</p>
       </div>
       <img
         src={mountains}
@@ -19,7 +19,7 @@ const ParallaxSection = () => {
       />
        <motion.a
           href="#portfolio"
-          className="absolute right-10 bottom-10"
+          className="absolute right-10 bottom-20"
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
         >

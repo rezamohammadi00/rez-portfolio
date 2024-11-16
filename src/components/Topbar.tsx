@@ -28,7 +28,7 @@ const Topbar = () => {
         رض
       </motion.p>
 
-      <div className="flex gap-2 justify-between items-center">
+      <div className="flex gap-3 justify-between items-center">
       <Lottie animationData={linkedin} loop={true} className="-ml-3 w-12"/> 
         {socialIcons.map(({alt,src,href}) => (
           <a href={href} key={alt}>
