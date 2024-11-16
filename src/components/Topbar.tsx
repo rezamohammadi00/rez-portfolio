@@ -21,9 +21,9 @@ const Topbar = () => {
     <div className="flex justify-between items-center">
       <motion.p
         className="text-2xl font-bold"
-        initial={{ opacity: 0, scale: 0.5 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5 }}
+        // initial={{ opacity: 0, scale: 0.5 }}
+        // animate={{ opacity: 1, scale: 1 }}
+        // transition={{ duration: 0.5 }}
       >
         رض
       </motion.p>
