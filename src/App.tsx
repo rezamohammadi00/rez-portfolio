@@ -1,8 +1,8 @@
 // import Sidebar from "./components/Sidebar";
-import ContactSection from "./sections/ContactSection";
+// import ContactSection from "./sections/ContactSection";
 import HeroSection from "./sections/HeroSection";
 import ParallaxSection from "./sections/ParallaxSection";
-import PortfolioSection from "./sections/PortfolioSection";
+// import PortfolioSection from "./sections/PortfolioSection";
 import ServicesSection from "./sections/ServicesSection";
 
 const App = () => {
@@ -17,13 +17,13 @@ const App = () => {
           <ParallaxSection />
         </div>
         <ServicesSection />
-        <ParallaxSection />
-        <div id="portfolio">
+        {/* <ParallaxSection /> */}
+        {/* <div id="portfolio">
           <PortfolioSection />
-        </div>
+        </div> */}
+        {/* <PortfolioSection />
         <PortfolioSection />
-        <PortfolioSection />
-        <ContactSection />
+        <ContactSection /> */}
         {/* <Sidebar/> */}
       </div>
     </div>

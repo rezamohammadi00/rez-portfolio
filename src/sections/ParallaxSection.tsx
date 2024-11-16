@@ -18,7 +18,7 @@ const ParallaxSection = () => {
         className="object-center absolute bottom-0 w-full h-96"
       />
        <motion.a
-          href="#portfolio"
+          href="#sevices"
           className="absolute right-10 bottom-20"
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}

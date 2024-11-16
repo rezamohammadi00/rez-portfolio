@@ -9,7 +9,7 @@ interface ButtonProps {
 }
 
 const Button = ({ text, variant }: ButtonProps) => {
-  const baseStyles = "px-4 py-2 rounded-md";
+  const baseStyles = "px-4 py-2 rounded-md font-regular";
   const variantStyles = {
     filled: "text-black bg-AppTextColor",
     outlined: "border border-AppTextColor text-AppTextColor",
@@ -37,7 +37,7 @@ const HeroSection = () => {
         <div className="flex flex-col gap-4 items-star">
           {/* <p className="mx-auto text-base text-indigo-800">رضا‌محمدی</p> */}
           <motion.p
-            className="flex flex-col items-center w-full text-lg font-bold leading-8 text-center"
+            className="flex flex-col items-center w-full text-2xl font-bold leading-8 text-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
