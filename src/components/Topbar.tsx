@@ -35,11 +35,11 @@ const Topbar = () => {
       <img src={logo} alt="logo" className="object-cover w-28" />
 
       <div className="flex gap-3 justify-between items-center">
-        <a href="https://www.linkedin.com/in/reza-mohammadi-30ab10238/">
+        <a href="https://www.linkedin.com/in/reza-mohammadi-30ab10238/" target="_blank">
           <Lottie animationData={linkedin} loop={true} className="-ml-3 w-12" />
         </a>
         {socialIcons.map(({ alt, src, href }) => (
-          <a href={href} key={alt}>
+          <a href={href} key={alt} target="_blank">
             <img src={src} alt={alt} className="w-6" />
           </a>
         ))}
