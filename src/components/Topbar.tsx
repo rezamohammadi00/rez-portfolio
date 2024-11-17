@@ -12,8 +12,12 @@ import linkedin from "../assets/lottie/Linkedin.json";
 import logo from "../assets/images/logo.png";
 
 const socialIcons = [
-  { href: "#", src: instagramIcon, alt: "Instagram" },
-  { href: "#", src: dribbbleIcon, alt: "Dribbble" },
+  {
+    href: "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fh.afrasiab%2F%3Fhl%3Den&is_from_rle",
+    src: instagramIcon,
+    alt: "Instagram",
+  },
+  { href: "https://dribbble.com/irez__", src: dribbbleIcon, alt: "Dribbble" },
   // { href: "#", src: facebookIcon, alt: "Facebook" },
   // { href: "#", src: youtubeIcon, alt: "YouTube" },
 ];
@@ -31,7 +35,9 @@ const Topbar = () => {
       <img src={logo} alt="logo" className="object-cover w-28" />
 
       <div className="flex gap-3 justify-between items-center">
-        <Lottie animationData={linkedin} loop={true} className="-ml-3 w-12" />
+        <a href="https://www.linkedin.com/in/reza-mohammadi-30ab10238/">
+          <Lottie animationData={linkedin} loop={true} className="-ml-3 w-12" />
+        </a>
         {socialIcons.map(({ alt, src, href }) => (
           <a href={href} key={alt}>
             <img src={src} alt={alt} className="w-6" />

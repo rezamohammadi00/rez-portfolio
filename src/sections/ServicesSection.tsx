@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useRef } from "react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-cards";
@@ -10,6 +11,17 @@ import people from "../assets/images/people.webp";
 import SCROLL from "../assets/images/scroll.png";
 
 const ServicesSection = () => {
+  const swiperRef = useRef(null);
+
+  let card = 0;
+  const handleScroll = () => {
+    if (card == 2) {
+      card = 0;
+      return swiperRef.current.swiper.slideTo(card);
+    }
+    card += 1;
+    swiperRef.current.swiper.slideTo(card);
+  };
   return (
     <div
       className="flex overflow-hidden relative flex-col gap-16 justify-center h-screen snap-center"
@@ -22,11 +34,14 @@ const ServicesSection = () => {
           className="object-cover w-48 h-12 rounded-full"
         />
         <h2 className="text-2xl font-bold leading-8 text-center">
-          ایدهای <span className="text-orange-400">یونیک</span>
+          ایده های <span className="text-orange-400">یونیک</span>
           <br /> برای کسب کارشما
         </h2>
 
-        <button className="w-36 h-12 text-black bg-orange-400 rounded-full font-regular">
+        <button
+          className="w-36 h-12 text-black bg-orange-400 rounded-full font-regular"
+          onClick={handleScroll}
+        >
           تخصص؟
         </button>
       </div>
@@ -36,6 +51,7 @@ const ServicesSection = () => {
           grabCursor={true}
           modules={[EffectCards]}
           className="mySwiper"
+          ref={swiperRef} // Attach the ref to Swiper
         >
           <SwiperSlide className="border-2 border-orange-400 bg-AppBgColor">
             <div>
