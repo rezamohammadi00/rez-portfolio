@@ -18,20 +18,31 @@ const ParallaxSection = ({ text }: { text: string }) => {
   const [displayedText, setDisplayedText] = useState("");
   useEffect(() => {
     let index = 0;
-    const interval = setInterval(() => {
-      if (index < text.length) {
-        setDisplayedText((prev: string) => {
-          if (text[index]) {
-            return prev + text[index];
+    let isDeleting = false; // New variable to track deleting state
+    const interval = setInterval(
+      () => {
+        if (!isDeleting) {
+          if (index < text.length) {
+            setDisplayedText((prev: string) => {
+              if (text[index]) return prev + text[index];
+              else return prev;
+            });
+            index++;
           } else {
-            return prev;
+            isDeleting = true; // Start deleting after reaching the end
           }
-        });
-        index++;
-      } else {
-        clearInterval(interval);
-      }
-    }, 170); // مدت زمان بین تایپ هر کاراکتر
+        } else {
+          if (index > 0) {
+            setDisplayedText((prev: string) => prev.slice(0, -1));
+            index--;
+          } else {
+            isDeleting = false; // Start typing again
+            index = 0; // Reset index for typing
+          }
+        }
+      },
+      isDeleting ? 70 : 170
+    ); // Adjust timing based on typing or deleting
 
     return () => clearInterval(interval);
   }, [text]);
