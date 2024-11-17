@@ -1,12 +1,19 @@
 import { motion } from "framer-motion";
 
 import mountains from "../assets/images/mountains.png";
+import sun from "../assets/images/sun.png";
 import stars from "../assets/images/stars.png";
 import SCROLL from "../assets/images/scroll.png";
 import { useEffect, useState } from "react";
 
 const ParallaxSection = ({ text }: { text: string }) => {
-  const backgroundStyle = { backgroundImage: `url(${stars})` };
+  const backgroundStyle = {
+    backgroundImage: `url(${stars})`,
+    backgroundAttachment: "fixed",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+  };
 
   const [displayedText, setDisplayedText] = useState("");
   useEffect(() => {
@@ -40,7 +47,12 @@ const ParallaxSection = ({ text }: { text: string }) => {
         >
           {displayedText}
         </motion.p>
-      </div>
+      </div>{" "}
+      <img
+        src={sun}
+        alt="mountains"
+        className="object-center absolute bottom-20 w-96"
+      />
       <img
         src={mountains}
         alt="mountains"
