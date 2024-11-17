@@ -11,7 +11,10 @@ import SCROLL from "../assets/images/scroll.png";
 
 const ServicesSection = () => {
   return (
-    <div className="flex overflow-hidden relative flex-col gap-16 justify-center h-screen snap-center" id="sevices">
+    <div
+      className="flex overflow-hidden relative flex-col gap-16 justify-center h-screen snap-center"
+      id="sevices"
+    >
       <div className="flex flex-col gap-4 justify-center items-center">
         <img
           src={people}
@@ -24,7 +27,7 @@ const ServicesSection = () => {
         </h2>
 
         <button className="w-36 h-12 text-black bg-orange-400 rounded-full font-regular">
-          کارما؟
+          تخصص؟
         </button>
       </div>
       <div>
@@ -63,13 +66,13 @@ const ServicesSection = () => {
         </Swiper>
       </div>
       <motion.a
-          href="#parallax2"
-          className="absolute right-10 bottom-20"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-        >
-          <img src={SCROLL} alt="scroll" className="w-10" />
-        </motion.a>
+        href="#parallax2"
+        className="absolute right-10 bottom-20"
+        animate={{ y: [0, 10, 0] }}
+        transition={{ duration: 2, repeat: Infinity }}
+      >
+        <img src={SCROLL} alt="scroll" className="w-10" />
+      </motion.a>
     </div>
   );
 };
