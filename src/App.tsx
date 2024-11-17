@@ -14,9 +14,13 @@ const App = () => {
         <HeroSection />
 
         <div id="parallax1">
-          <ParallaxSection />
+          <ParallaxSection text = "کاار من چیه؟" />
         </div>
         <ServicesSection />
+
+        <div id="parallax2">
+          <ParallaxSection  text ="مییخوای کارمو ببینی؟" />
+        </div>
         {/* <ParallaxSection /> */}
         {/* <div id="portfolio">
           <PortfolioSection />

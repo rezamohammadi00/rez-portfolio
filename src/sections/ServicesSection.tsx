@@ -63,7 +63,7 @@ const ServicesSection = () => {
         </Swiper>
       </div>
       <motion.a
-          href="#sevices"
+          href="#parallax2"
           className="absolute right-10 bottom-20"
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}

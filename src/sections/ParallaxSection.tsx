@@ -5,22 +5,19 @@ import stars from "../assets/images/stars.png";
 import SCROLL from "../assets/images/scroll.png";
 import { useEffect, useState } from "react";
 
-const ParallaxSection = () => {
+const ParallaxSection = ({ text }: { text: string }) => {
   const backgroundStyle = { backgroundImage: `url(${stars})` };
 
-
-  //typing effect
-  const text = "تخخصص من چیه ؟"
   const [displayedText, setDisplayedText] = useState("");
   useEffect(() => {
     let index = 0;
     const interval = setInterval(() => {
       if (index < text.length) {
-        setDisplayedText((prev:string) => {
-          if(text[index]){
-            return prev + text[index]
-          }else{
-            return prev
+        setDisplayedText((prev: string) => {
+          if (text[index]) {
+            return prev + text[index];
+          } else {
+            return prev;
           }
         });
         index++;
